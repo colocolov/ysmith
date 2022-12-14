@@ -1,0 +1,69 @@
+.main
+  position: relative
+  padding-bottom: 38px
+  &::before
+    position: absolute
+    content: ''
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    height: 1px
+    width: 100px
+    background: $text
+  &__block
+    position: relative
+  &__left
+    position: absolute
+    // transform:
+    writing-mode: vertical-lr
+    top: 50%
+    left: -40px
+    transform: rotate(-180deg) translateY(50%)
+    font-size: 20px
+    line-height: 1.2
+  &__img
+    position: relative
+    margin-bottom: 37px
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.18) 57.99%, rgba(0, 0, 0, 0) 100%)
+  &__content
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 50px
+  &__head
+    max-width: 681px
+    @include font(400, 66, 73)
+    color: $white
+    margin-bottom: 20px
+  &__btn
+    border: 2px solid $grey
+  &__right
+    position: absolute
+    writing-mode: vertical-lr
+    top: 50%
+    right: -40px
+    transform: translateY(-50%)
+    font-size: 20px
+    line-height: 1.2
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: -60px
+      width: 120px
+      height: 1px
+      background: $text
+      transform: rotate(90deg) translateY(-50%)
+  &__scroll
+    margin: 0 auto
+    font-size: 20px
+    line-height: 1.2
+    text-align: center
+
