@@ -32,11 +32,22 @@
       width: 100%
       height: 100%
       background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.18) 57.99%, rgba(0, 0, 0, 0) 100%)
+  &__on
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 156px
   &__content
+    width: 0
+    opacity: 0
     position: absolute
     top: 50%
     transform: translateY(-50%)
     left: 50px
+    transition: all 1s ease
+    &.active
+      width: 100%
+      opacity: 1
   &__head
     max-width: 681px
     @include font(400, 66, 73)
@@ -66,4 +77,38 @@
     font-size: 20px
     line-height: 1.2
     text-align: center
+
+.switch
+  display: none
+  &-off
+    cursor: pointer
+    @include font(700, 55, 70)
+    color: $white
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      top: -50%
+      // transform: translateY(-50%)
+      left: 123px
+      width: 250px
+      height: 100px
+      background: #D7D7D7
+      border-radius: 60px
+    &::before
+      content: ''
+      width: 94px
+      height: 94px
+      background: $white
+      border-radius: 50%
+      position: absolute
+      top: calc(-50% + 3px)
+      left: 126px
+      z-index: 1
+      transition-duration: 0.3s
+  &:checked + .switch-off::before
+    // color: red
+    left: 276px
+  &:checked + .switch-off::after
+    background: $green
 

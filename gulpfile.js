@@ -14,7 +14,7 @@ let path = {
   src: {
     html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
     css: source_folder + "/sass/style.sass",
-    cssadd: source_folder + "/css/libs.scss",
+    // cssadd: source_folder + "/css/libs.scss",
     js: source_folder + "/js/scripts/*.js",
     jsadd: [source_folder + "/js/l-ibs.js"],
     images: source_folder + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
@@ -338,7 +338,7 @@ let done = gulp.series(
   cleanDist,
   gulp.parallel(
     cssBuild,
-    cssAdd,
+    // cssAdd,
     htmlBuild,
     jsBuild,
     jsAdd,
