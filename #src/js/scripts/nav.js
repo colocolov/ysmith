@@ -58,6 +58,7 @@ const menuBody = document.querySelector(".menu__body");
 const menuLink = document.querySelectorAll(".menu__item");
 if (iconMenu) {
   iconMenu.addEventListener("click", function (e) {
+    console.log("menu");
     document.body.classList.toggle("_lock");
     iconMenu.classList.toggle("_active");
     menuBody.classList.toggle("_active");

@@ -14,7 +14,6 @@
     position: relative
   &__left
     position: absolute
-    // transform:
     writing-mode: vertical-lr
     top: 50%
     left: -40px
@@ -32,11 +31,15 @@
       width: 100%
       height: 100%
       background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.18) 57.99%, rgba(0, 0, 0, 0) 100%)
-  &__on
+  &__switch
     position: absolute
     top: 50%
     transform: translateY(-50%)
     left: 156px
+    transition: all 0.5s ease
+    &._hide
+      animation: hideSwitch 1s 1 ease-in-out
+      animation-fill-mode: forwards
   &__content
     width: 0
     opacity: 0
@@ -44,10 +47,10 @@
     top: 50%
     transform: translateY(-50%)
     left: 50px
-    transition: all 1s ease
-    &.active
-      width: 100%
-      opacity: 1
+    transition: all 3s ease
+    &._active
+      animation: showContent 1s 1 0.5s ease-in-out
+      animation-fill-mode: forwards
   &__head
     max-width: 681px
     @include font(400, 66, 73)
@@ -78,6 +81,29 @@
     line-height: 1.2
     text-align: center
 
+
+@keyframes showContent
+  0%
+    width: 0
+    opacity: 0
+  50%
+    width: 100%
+    opacity: 0.3
+  100%
+    opacity: 1
+    width: 100%
+
+@keyframes hideSwitch
+  0%
+    opacity: 1
+    width: 100%
+  50%
+    opacity: 0.3
+    width: 100%
+  100%
+    width: 0
+    opacity: 0
+
 .switch
   display: none
   &-off
@@ -85,11 +111,11 @@
     @include font(700, 55, 70)
     color: $white
     position: relative
+    transition: all 0.3s linear
     &::after
       content: ''
       position: absolute
       top: -50%
-      // transform: translateY(-50%)
       left: 123px
       width: 250px
       height: 100px
@@ -106,9 +132,22 @@
       left: 126px
       z-index: 1
       transition-duration: 0.3s
+  &-on
+    cursor: pointer
+    @include font(700, 55, 70)
+    color: $white
+    position: relative
+    left: 300px
+    width: 0
+    opacity: 0
+    transition: all 0.3s linear
   &:checked + .switch-off::before
-    // color: red
     left: 276px
   &:checked + .switch-off::after
     background: $green
+  &:checked + .switch-off
+    color: transparent
+  &:checked ~ .switch-on
+    width: auto
+    opacity: 1
 
