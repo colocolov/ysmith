@@ -31,7 +31,41 @@
       <nav class="menu__body">
         <ul class="menu__list">
           <li class="menu__item"><a class="menu__link" href="">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="">About us</a></li>
+          <li class="menu__item"><a class="menu__link" href="">Team</a></li>
+          <li class="menu__item"><a class="menu__link" href="">Coaching</a></li>
           <li class="menu__item"><a class="menu__link" href="">Blog</a></li>
+          <li class="menu__item"><a class="menu__link" href="">Contact</a></li>
+        </ul>
+        <ul class="social">
+          <li class="social__item">
+            <a href="https://facebook.com" class="social__link">
+              <svg class="social__icon" aria-hidden="true">
+                <use xlink:href="images/icons/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://instagram.com" class="social__link">
+              <svg class="social__icon" aria-hidden="true">
+                <use xlink:href="images/icons/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://youtube.com" class="social__link">
+              <svg class="social__icon" aria-hidden="true">
+                <use xlink:href="images/icons/sprite.svg#youtube"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://twitter.com" class="social__link">
+              <svg class="social__icon" aria-hidden="true">
+                <use xlink:href="images/icons/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
         </ul>
       </nav>
       <button type="button" class="menu__icon">
@@ -43,30 +77,55 @@
   </div>
 </header>
 
-      <main class="main"><section class="main">
-  <div class="main__container">
-    <div class="main__block">
-      <div class="main__left">Learn from Y. Smith</div>
-      <div class="main__img">
+      <main class="main">
+        <section class="main-block">
+  <div class="main-block__container">
+    <div class="main-block__block">
+      <div class="main-block__left">Learn from Y. Smith</div>
+      <div class="main-block__img">
         <img class="image" src="images/index/main.jpg" alt="Main img" />
       </div>
-      <div class="main__switch">
+      <div class="main-block__switch">
         <input class="switch" id="switch-input" type="checkbox" />
         <label class="switch-off" for="switch-input">Off</label>
         <label class="switch-on" for="switch-input">On</label>
       </div>
-      <div class="main__content">
-        <h1 class="main__head heading">
+      <div class="main-block__content">
+        <h1 class="main-block__head heading">
           We will teach you to cope with yourself
         </h1>
-        <button class="btn-reset btn main__btn">contact us</button>
+        <button class="main-block__btn btn-reset btn">Contact us</button>
       </div>
-      <a href="#" class="main__right">learn more</a>
+      <a href="#" class="main-block__right link-more">Learn more</a>
     </div>
-    <div class="main__scroll">Scroll for more</div>
+    <div class="main-block__scroll">Scroll for more</div>
   </div>
 </section>
-</main>
+<section class="about">
+  <div class="about__container">
+    <h2 class="about__title heading">
+      A plan in the heart of a man is like deep water,<br />But a man of
+      understanding draws it out.
+    </h2>
+    <div class="about__block">
+      <div class="about__content">
+        <h2 class="about__head heading">About us</h2>
+        <div class="about__text">
+          Here you can briefly describe your approach to learning and your
+          vision. Below there will be a button that will send you to another
+          page where there will be a more detailed description and acquaintance.
+        </div>
+        <a href="" class="about__link link-more">Learn more</a>
+        <button class="about__btn btn-reset btn">Contact us</button>
+      </div>
+      <div class="about__img">
+        <img class="image" src="images/index/about.jpg" alt="About us Y.Smith" />
+      </div>
+    </div>
+  </div>
+</section>
+
+      </main>
       <footer class="footer">
   <div class="footer__container"></div>
 </footer>

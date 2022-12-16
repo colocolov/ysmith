@@ -1,25 +1,25 @@
-.main
+.main-block
   position: relative
   padding-bottom: 38px
   &::before
     position: absolute
     content: ''
     bottom: 0
-    left: 50%
-    transform: translateX(-50%)
-    height: 1px
     width: 100px
+    height: 1px
+    left: 50%
     background: $text
+    transform: translateX(-50%)
   &__block
     position: relative
   &__left
     position: absolute
-    writing-mode: vertical-lr
     top: 50%
     left: -40px
-    transform: rotate(-180deg) translateY(50%)
     font-size: 20px
     line-height: 1.2
+    writing-mode: vertical-lr
+    transform: rotate(-180deg) translateY(50%)
   &__img
     position: relative
     margin-bottom: 37px
@@ -34,120 +34,44 @@
   &__switch
     position: absolute
     top: 50%
-    transform: translateY(-50%)
     left: 156px
+    transform: translateY(-50%)
     transition: all 0.5s ease
     &._hide
       animation: hideSwitch 1s 1 ease-in-out
       animation-fill-mode: forwards
   &__content
-    width: 0
-    opacity: 0
     position: absolute
     top: 50%
-    transform: translateY(-50%)
     left: 50px
+    width: 0
+    opacity: 0
+    transform: translateY(-50%)
     transition: all 3s ease
     &._active
       animation: showContent 1s 1 0.5s ease-in-out
       animation-fill-mode: forwards
   &__head
     max-width: 681px
+    margin-bottom: 20px
     @include font(400, 66, 73)
     color: $white
-    margin-bottom: 20px
   &__btn
     border: 2px solid $grey
   &__right
     position: absolute
-    writing-mode: vertical-lr
     top: 50%
     right: -40px
+    writing-mode: vertical-lr
     transform: translateY(-50%)
-    font-size: 20px
-    line-height: 1.2
-    &:before
-      content: ''
-      position: absolute
+    &::before
       top: 50%
       left: -60px
       width: 120px
-      height: 1px
-      background: $text
       transform: rotate(90deg) translateY(-50%)
   &__scroll
     margin: 0 auto
     font-size: 20px
     line-height: 1.2
     text-align: center
-
-
-@keyframes showContent
-  0%
-    width: 0
-    opacity: 0
-  50%
-    width: 100%
-    opacity: 0.3
-  100%
-    opacity: 1
-    width: 100%
-
-@keyframes hideSwitch
-  0%
-    opacity: 1
-    width: 100%
-  50%
-    opacity: 0.3
-    width: 100%
-  100%
-    width: 0
-    opacity: 0
-
-.switch
-  display: none
-  &-off
-    cursor: pointer
-    @include font(700, 55, 70)
-    color: $white
-    position: relative
-    transition: all 0.3s linear
-    &::after
-      content: ''
-      position: absolute
-      top: -50%
-      left: 123px
-      width: 250px
-      height: 100px
-      background: #D7D7D7
-      border-radius: 60px
-    &::before
-      content: ''
-      width: 94px
-      height: 94px
-      background: $white
-      border-radius: 50%
-      position: absolute
-      top: calc(-50% + 3px)
-      left: 126px
-      z-index: 1
-      transition-duration: 0.3s
-  &-on
-    cursor: pointer
-    @include font(700, 55, 70)
-    color: $white
-    position: relative
-    left: 300px
-    width: 0
-    opacity: 0
-    transition: all 0.3s linear
-  &:checked + .switch-off::before
-    left: 276px
-  &:checked + .switch-off::after
-    background: $green
-  &:checked + .switch-off
-    color: transparent
-  &:checked ~ .switch-on
-    width: auto
-    opacity: 1
 

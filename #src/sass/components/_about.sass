@@ -1,0 +1,42 @@
+.about
+  position: relative
+  padding: 100px 0
+  &::before
+    position: absolute
+    content: ''
+    bottom: 0
+    width: 100px
+    height: 1px
+    left: 50%
+    background: $text
+    transform: translateX(-50%)
+  &__title
+    margin: 0 auto
+    margin-bottom: 100px
+    max-width: 822px
+    text-align: center
+  &__block
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    margin-right: 50px
+  &__head
+    margin-bottom: 20px
+  &__text
+    max-width: 500px
+    margin-bottom: 20px
+  &__link
+    margin-bottom: 40px
+    @include font(700, 20, 25)
+    &::before
+      bottom: -5px
+  &__btn
+    border: 2px solid $grey
+    background: $text
+  &__img
+    flex-shrink: 0
+    width: 600px
