@@ -695,6 +695,77 @@ input {
   width: 600px;
 }
 
+.advantages {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+.advantages::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100px;
+  height: 1px;
+  left: 50%;
+  background: #5A534B;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.advantages__intro {
+  margin-bottom: 90px;
+}
+.advantages__head {
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transform: translateY(80px);
+  -ms-transform: translateY(80px);
+  transform: translateY(80px);
+  color: #F6F6F6;
+}
+.advantages__image {
+  position: relative;
+  height: 500px;
+  z-index: -1;
+}
+.advantages__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.advantages__item {
+  width: 200px;
+}
+.advantages__item:not(:last-child) {
+  margin-right: 20px;
+}
+.advantages__name {
+  position: relative;
+  font-family: "Forum";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.1111111111;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.advantages__name::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 1px;
+  background: #5A534B;
+  width: 65%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
 @media (min-width: 992px) {
   .menu__item:hover {
     color: rgba(90, 83, 75, 0.4);

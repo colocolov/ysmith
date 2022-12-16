@@ -1,0 +1,48 @@
+.advantages
+  position: relative
+  padding-top: 60px
+  padding-bottom: 120px
+  &::before
+    position: absolute
+    content: ''
+    bottom: 0
+    width: 100px
+    height: 1px
+    left: 50%
+    background: $text
+    transform: translateX(-50%)
+  &__intro
+    margin-bottom: 90px
+  &__head
+    margin: 0 auto
+    text-align: center
+    transform: translateY(80px)
+    color: $grey
+  &__image
+    position: relative
+    height: 500px
+    z-index: -1
+  &__list
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &__item
+    width: 200px
+    &:not(:last-child)
+      margin-right: 20px
+  &__name
+    position: relative
+    font-family: 'Forum'
+    @include font(400, 36, 40)
+    margin-bottom: 20px
+    text-align: center
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 50%
+      height: 1px
+      background: $text
+      width: 65%
+      transform: translateX(-50%)
+  &__description
