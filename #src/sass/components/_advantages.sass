@@ -30,12 +30,15 @@
     width: 200px
     &:not(:last-child)
       margin-right: 20px
-  &__name
+  &__count
+    // margin: 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 20px
     position: relative
     font-family: 'Forum'
     @include font(400, 36, 40)
-    margin-bottom: 20px
-    text-align: center
     &::before
       content: ''
       position: absolute
@@ -45,4 +48,7 @@
       background: $text
       width: 65%
       transform: translateX(-50%)
+  &__name
+    display: inline-block
+    margin-right: 7px
   &__description

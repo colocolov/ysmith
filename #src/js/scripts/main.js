@@ -16,3 +16,21 @@ function hideSwitch() {
 function showContent() {
   mainContent.classList.add("_active");
 }
+
+const dataCounters = document.querySelectorAll(".advantages__name");
+
+dataCounters.forEach((item) => {
+  item.innerHTML = "0";
+  const updateCounter = () => {
+    const target = +item.getAttribute("data-counter");
+    const c = +item.innerText;
+
+    if (c < target) {
+      item.innerText = c + 1;
+      setTimeout(updateCounter, 1);
+    } else {
+      item.innerText = target;
+    }
+  };
+  updateCounter();
+});

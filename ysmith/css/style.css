@@ -745,16 +745,24 @@ input {
 .advantages__item:not(:last-child) {
   margin-right: 20px;
 }
-.advantages__name {
+.advantages__count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px;
   position: relative;
   font-family: "Forum";
   font-weight: 400;
   font-size: 36px;
   line-height: 1.1111111111;
-  margin-bottom: 20px;
-  text-align: center;
 }
-.advantages__name::before {
+.advantages__count::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -765,6 +773,10 @@ input {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+.advantages__name {
+  display: inline-block;
+  margin-right: 7px;
 }
 @media (min-width: 992px) {
   .menu__item:hover {
