@@ -222,6 +222,10 @@ input {
 }
 .header__logo {
   width: 108px;
+  height: 64px;
+}
+.header__svg {
+  fill: #AA9DA4;
 }
 
 .menu {
@@ -778,6 +782,36 @@ input {
   display: inline-block;
   margin-right: 7px;
 }
+.footer {
+  padding-top: 100px;
+  padding-bottom: 75px;
+}
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.footer__logo {
+  height: 64px;
+  width: 108px;
+}
+.footer__svg {
+  fill: #5A534B;
+}
+.footer__btn {
+  border: 2px solid #5A534B;
+  color: #5A534B;
+  -webkit-transform: translateX(41px);
+  -ms-transform: translateX(41px);
+  transform: translateX(41px);
+}
+
 @media (min-width: 992px) {
   .menu__item:hover {
     color: rgba(90, 83, 75, 0.4);
