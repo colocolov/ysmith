@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#111111" />
   <!-- <link rel="stylesheet" href="css/adv.css" /> -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css?ver=1.0.0" />
   <!-- подключение скриптов -->
-  <!-- <script defer src="js/vendor/swiper-bundle.min.js"></script> -->
+  <script defer src="js/vendor/swiper-bundle.min.js"></script>
   <script defer src="js/main.min.js"></script>
   <!-- подключение favicon -->
   <link
@@ -177,6 +178,59 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+<section class="reviews">
+  <div class="reviews__container">
+    <div class="swiper-container reviews__sliders">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="reviews__slide">
+            <div class="reviews__message">
+              <h2 class="reviews__head heading">Reviews</h2>
+              <p class="reviews__author">A. Gabriel</p>
+              <p class="reviews__text">
+                At this point, you can leave feedback from your customers. You
+                can describe their feedback in detail and leave a link to the
+                real person you helped.
+              </p>
+            </div>
+            <div class="reviews__avatar">
+              <img src="images/reviews/01.jpg" alt="avatar" class="image" />
+            </div>
+          </div>
+          <!-- /.reviews__tab -->
+        </div>
+        <!-- /.swiper-slide -->
+      </div>
+      <!-- /.swiper-wrapper -->
+      <!-- <div class="swiper-pagination"></div> -->
+      <button id="left" class="reviews-button reviews-button--left">
+        <svg
+          width="151"
+          height="16"
+          viewBox="0 0 151 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.292892 8.70711C-0.0976257 8.31658 -0.0976257 7.68342 0.292892 7.29289L6.65686 0.928932C7.04738 0.538408 7.68054 0.538408 8.07108 0.928932C8.46159 1.31946 8.46159 1.95262 8.07108 2.34315L2.41422 8L8.07108 13.6569C8.46159 14.0474 8.46159 14.6805 8.07108 15.0711C7.68054 15.4616 7.04738 15.4616 6.65686 15.0711L0.292892 8.70711ZM151 9H1V7H151V9Z"
+          />
+        </svg>
+      </button>
+      <button id="right" class="reviews-button reviews-button--right">
+        <svg
+          width="151"
+          height="16"
+          viewBox="0 0 151 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M150.707 8.70711C151.098 8.31658 151.098 7.68342 150.707 7.29289L144.343 0.928932C143.953 0.538408 143.319 0.538408 142.929 0.928932C142.538 1.31946 142.538 1.95262 142.929 2.34315L148.586 8L142.929 13.6569C142.538 14.0474 142.538 14.6805 142.929 15.0711C143.319 15.4616 143.953 15.4616 144.343 15.0711L150.707 8.70711ZM0 9H150V7H0V9Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <!-- /.reviews-slider -->
   </div>
 </section>
 
